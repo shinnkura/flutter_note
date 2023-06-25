@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_note/components/button.dart';
 import 'package:flutter_note/responsive/responsive.dart';
 
 void main() {
@@ -53,9 +54,17 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'Hello World',
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Button(
+                width: double.infinity,
+                title: 'レスポンシブデザイン',
+                onPressed: () {
+                  Navigator.of(context).pushNamed('responsive');
+                },
+                disable: false,
+              ),
             ),
           ],
         ),
