@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_note/responsive/component/menu.dart';
 
 class MyDesktopBody extends StatelessWidget {
   const MyDesktopBody({Key? key}) : super(key: key);
@@ -48,6 +49,7 @@ class MyDesktopBody extends StatelessWidget {
               child: Container(
                 width: 200,
                 color: Colors.deepPurple[300],
+                child: Menu(),
               ),
             )
           ],

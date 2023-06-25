@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_note/components/button.dart';
+import 'package:flutter_note/responsive/component/menu.dart';
 
 class MyMobileBody extends StatelessWidget {
   const MyMobileBody({Key? key}) : super(key: key);
@@ -12,32 +12,7 @@ class MyMobileBody extends StatelessWidget {
         title: Text('M O B I L E'),
       ),
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            Container(
-              height: 60.0,
-              child: DrawerHeader(
-                child: Text('Menu'),
-                decoration: BoxDecoration(
-                  color: Colors.deepPurple,
-                ),
-              ),
-            ),
-            ListTile(
-              title: Text('Item 1'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Item 2'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
+        child: Menu(),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
