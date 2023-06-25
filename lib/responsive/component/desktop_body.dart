@@ -14,11 +14,9 @@ class MyDesktopBody extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            // First column
             Expanded(
               child: Column(
                 children: [
-                  // youtube video
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: AspectRatio(
@@ -28,8 +26,6 @@ class MyDesktopBody extends StatelessWidget {
                       ),
                     ),
                   ),
-
-                  // comment section & recommended videos
                   Expanded(
                     child: ListView.builder(
                       itemCount: 8,
@@ -47,8 +43,6 @@ class MyDesktopBody extends StatelessWidget {
                 ],
               ),
             ),
-
-            // second column
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(

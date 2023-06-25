@@ -14,7 +14,6 @@ class MyMobileBody extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            // youtube video
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: AspectRatio(
@@ -24,8 +23,6 @@ class MyMobileBody extends StatelessWidget {
                 ),
               ),
             ),
-
-            // comment section & recommended videos
             Expanded(
               child: ListView.builder(
                 itemCount: 8,
