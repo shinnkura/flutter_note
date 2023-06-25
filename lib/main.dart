@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note/components/button.dart';
-import 'package:flutter_note/responsive/responsive.dart';
+import 'package:flutter_note/responsive/purple_responsive/responsive.dart';
 
 void main() {
   runApp(const MyHome());

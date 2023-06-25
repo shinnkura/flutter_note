@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_note/responsive/component/menu.dart';
+import 'package:flutter_note/responsive/purple_responsive/component/menu.dart';
 
 class MyMobileBody extends StatelessWidget {
   const MyMobileBody({Key? key}) : super(key: key);
