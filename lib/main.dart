@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note/components/button.dart';
+import 'package:flutter_note/responsive/dashboard_responsive/main.dart';
 import 'package:flutter_note/responsive/purple_responsive/responsive.dart';
 
 void main() {
@@ -21,7 +22,8 @@ class MyHome extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => MyApp(),
-        'responsive': (context) => Responsive(),
+        'p_responsive': (context) => Responsive(),
+        'd_responsive': (context) => TableResponsive(),
       },
     );
   }
@@ -43,15 +45,34 @@ class MyApp extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(
+              'レスポンシブデザイン',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
             Padding(
               padding: EdgeInsets.all(20),
-              child: Button(
-                width: double.infinity,
-                title: 'レスポンシブデザイン',
-                onPressed: () {
-                  Navigator.of(context).pushNamed('responsive');
-                },
-                disable: false,
+              child: Column(
+                children: [
+                  Button(
+                    width: double.infinity,
+                    title: 'シンプルレスポンシブ',
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('p_responsive');
+                    },
+                    disable: false,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Button(
+                    width: double.infinity,
+                    title: 'ダッシュボードレスポンシブ',
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('d_responsive');
+                    },
+                    disable: false,
+                  ),
+                ],
               ),
             ),
           ],
