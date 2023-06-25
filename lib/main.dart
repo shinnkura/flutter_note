@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
-
-//　新規アプリを起動した際のデフォルトのコード
-// コメントアウトしないで、書いて
+import 'package:flutter_note/responsive/responsive.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyHome());
+}
+
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Note',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyApp(),
+        'responsive': (context) => Responsive(),
+        // '/second': (context) =>  SecondPage(),
+      },
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -12,6 +27,39 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      title: 'Flutter Note',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text('Flutter Note'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[
+            Text(
+              'Hello World',
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

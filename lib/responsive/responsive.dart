@@ -1,14 +1,12 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'homepage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Responsive());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Responsive extends StatelessWidget {
+  const Responsive({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
