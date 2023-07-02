@@ -26,10 +26,14 @@ class LottieApp extends StatelessWidget {
   }
 }
 
-class LottieWidget extends StatelessWidget {
+class LottieWidget extends StatefulWidget {
   LottieWidget({Key? key}) : super(key: key);
 
-  // List of Lottie animation asset paths
+  @override
+  _LottieWidgetState createState() => _LottieWidgetState();
+}
+
+class _LottieWidgetState extends State<LottieWidget> {
   final List<String> lottieIcons = [
     'assets/lottie/coffee.json',
     // 'assets/lottie_icon2.json',
@@ -68,9 +72,9 @@ class LottieWidget extends StatelessWidget {
   }
 
   _launchURL() async {
-    final Uri url = Uri.parse('https://lottiefiles.com/');
-    if (await canLaunch(url.toString())) {
-      await launch(url.toString());
+    final String url = 'https://lottiefiles.com/';
+    if (await canLaunch(url)) {
+      await launch(url);
     } else {
       throw 'Could not launch $url';
     }
