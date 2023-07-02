@@ -1,9 +1,11 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_note/components/button.dart';
-import 'package:flutter_note/responsive/dashboard_responsive/main.dart';
-import 'package:flutter_note/responsive/purple_responsive/responsive.dart';
+
+import 'components/button.dart';
+import 'responsive/dashboard_responsive/main.dart';
+import 'responsive/purple_responsive/responsive.dart';
+import 'lottie/main.dart';
 
 void main() {
   runApp(
@@ -31,9 +33,10 @@ class MyHome extends StatelessWidget {
         '/': (context) => MyApp(),
         'p_responsive': (context) => Responsive(),
         'd_responsive': (context) => TableResponsive(),
+        'lottie': (context) => LottieApp(),
       },
-      locale: DevicePreview.locale(context), // Add the locale here
-      builder: DevicePreview.appBuilder, // Add the builder here
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
     );
   }
 }
@@ -82,6 +85,24 @@ class MyApp extends StatelessWidget {
                     disable: false,
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              '動くアイコン画像',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Button(
+                width: double.infinity,
+                title: 'Lottie',
+                onPressed: () {
+                  Navigator.of(context).pushNamed('lottie');
+                },
+                disable: false,
               ),
             ),
           ],
