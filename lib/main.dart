@@ -28,6 +28,11 @@ class MyHome extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         useMaterial3: true,
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.deepPurple,
+        useMaterial3: true,
+      ),
       initialRoute: '/',
       routes: {
         '/': (context) => MyApp(),

@@ -20,6 +20,12 @@ class LottieApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         useMaterial3: true,
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.deepPurple,
+        useMaterial3: true,
+      ),
+      themeMode: ThemeMode.system,
       title: 'Lottie Demo',
       home: LottieWidget(),
     );

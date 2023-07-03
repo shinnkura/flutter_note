@@ -16,6 +16,10 @@ class TableResponsive extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.green),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.green,
+      ),
       home: ResponsiveLayout(
         mobileBody: const MobileScaffold(),
         tabletBody: const TabletScaffold(),
