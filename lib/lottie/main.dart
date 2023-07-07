@@ -63,14 +63,15 @@ class _LottieWidgetState extends State<LottieWidget> {
             SizedBox(
               height: 20,
             ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: lottieIcons.length,
-                itemBuilder: (context, index) {
-                  return Lottie.asset(lottieIcons[index]);
-                },
-              ),
-            ),
+            // Expanded(
+            //   child: ListView.builder(
+            //     itemCount: lottieIcons.length,
+            //     itemBuilder: (context, index) {
+            //       return Lottie.asset(lottieIcons[index]);
+            //     },
+            //   ),
+            // ),
+            Lottie.asset('assets/lottie/coffee.json'),
           ],
         ),
       ),
