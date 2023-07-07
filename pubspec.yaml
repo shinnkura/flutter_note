@@ -32,7 +32,7 @@ dependencies:
   device_preview: null
   flutter:
     sdk: flutter
-  lottie: ^2.4.0
+  lottie:
   url_launcher: null
 
 dev_dependencies:
