@@ -86021,7 +86021,7 @@ A.zK.prototype={
 al(){return new A.Ey(A.a(["assets/lottie/coffee.json"],t.s),B.j)}}
 A.Ey.prototype={
 I(a){var s=null
-return A.lr(A.rm(s,s,s,s,s,A.be("Lottie Demo",s,s,s,s,s,s,s)),s,A.mu(A.fb(A.a([new A.ow(200,"Open URL",!1,this.gaa9(),s),A.eG(s,20,s),new A.zJ(new A.I6("assets/lottie/coffee.json",s,s,s),s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s)],t.p),B.ah,B.aH,B.aB),s,s),s,s,s)},
+return A.lr(A.rm(s,s,s,s,s,A.be("Lottie Demo",s,s,s,s,s,s,s)),s,A.mu(A.fb(A.a([new A.ow(200,"Open URL",!1,this.gaa9(),s),A.eG(s,20,s),new A.zJ(new A.I6("assets/lottie/check.json",s,s,s),s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s)],t.p),B.ah,B.aH,B.aB),s,s),s,s,s)},
 tw(){var s=0,r=A.a3(t.z)
 var $async$tw=A.a4(function(a,b){if(a===1)return A.a0(b,r)
 while(true)switch(s){case 0:s=5
