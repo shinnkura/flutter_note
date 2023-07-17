@@ -3,10 +3,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 main() {
   // アプリ
-  const app = MaterialApp(home: Sample());
+  // const app = MaterialApp(home: Sample());
   // プロバイダースコープでアプリを囲む
-  const scope = ProviderScope(child: app);
-  runApp(scope);
+  // const scope = ProviderScope(child: app);
+  // runApp(scope);
+  runApp(
+    const ProviderScope(
+      child: MaterialApp(
+        home: Sample(),
+      ),
+    ),
+  );
 }
 
 // プロバイダー

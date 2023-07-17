@@ -39,11 +39,15 @@ class LottieWidget extends StatefulWidget {
   _LottieWidgetState createState() => _LottieWidgetState();
 }
 
-class _LottieWidgetState extends State<LottieWidget> {
-  final List<String> lottieIcons = [
-    'assets/lottie/coffee.json',
-    // 'assets/lottie_icon2.json',
-  ];
+class _LottieWidgetState extends State<LottieWidget>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(vsync: this);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,16 +67,24 @@ class _LottieWidgetState extends State<LottieWidget> {
             SizedBox(
               height: 20,
             ),
-            // Expanded(
-            //   child: ListView.builder(
-            //     itemCount: lottieIcons.length,
-            //     itemBuilder: (context, index) {
-            //       return Lottie.asset(lottieIcons[index]);
-            //     },
-            //   ),
-            // ),
-            // Lottie.asset('assets/lottie/coffee.json'),
-            Lottie.asset('assets/lottie/check.json'),
+            Lottie.asset(
+              'assets/lottie/coffee.json',
+              controller: _controller,
+              onLoaded: (composition) {
+                _controller
+                  ..duration = composition.duration
+                  ..forward();
+              },
+            ),
+            Lottie.asset(
+              'assets/lottie/check.json',
+              controller: _controller,
+              onLoaded: (composition) {
+                _controller
+                  ..duration = composition.duration
+                  ..forward();
+              },
+            ),
           ],
         ),
       ),
@@ -86,5 +98,11 @@ class _LottieWidgetState extends State<LottieWidget> {
     } else {
       throw 'Could not launch $url';
     }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }
