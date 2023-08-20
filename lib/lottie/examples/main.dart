@@ -3,12 +3,12 @@ import 'package:flutter_note/lottie/examples/homepage.dart';
 
 void main() {
   runApp(
-    CoolApp(),
+    ExamplesApp(),
   );
 }
 
-class CoolApp extends StatelessWidget {
-  CoolApp({super.key});
+class ExamplesApp extends StatelessWidget {
+  ExamplesApp({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'components/button.dart';
 import 'lottie/cool/main.dart';
+import 'lottie/examples/main.dart';
 import 'responsive/dashboard_responsive/main.dart';
 import 'responsive/purple_responsive/responsive.dart';
 import 'lottie/main.dart';
@@ -42,6 +43,7 @@ class MyHome extends StatelessWidget {
         'd_responsive': (context) => TableResponsive(),
         'lottie': (context) => LottieApp(),
         'cool': (context) => CoolApp(),
+        'example': (context) => ExamplesApp(),
       },
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
@@ -104,24 +106,39 @@ class MyApp extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(20),
-              child: Button(
-                width: double.infinity,
-                title: 'Lottie',
-                onPressed: () {
-                  Navigator.of(context).pushNamed('lottie');
-                },
-                disable: false,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Button(
-                width: double.infinity,
-                title: 'Cool Lottie',
-                onPressed: () {
-                  Navigator.of(context).pushNamed('cool');
-                },
-                disable: false,
+              child: Column(
+                children: [
+                  Button(
+                    width: double.infinity,
+                    title: 'Lottie',
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('lottie');
+                    },
+                    disable: false,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Button(
+                    width: double.infinity,
+                    title: 'Cool Lottie',
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('cool');
+                    },
+                    disable: false,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Button(
+                    width: double.infinity,
+                    title: 'タップすると動く',
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('example');
+                    },
+                    disable: false,
+                  ),
+                ],
               ),
             ),
           ],
