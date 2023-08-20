@@ -7,7 +7,6 @@ import 'lottie/cool/main.dart';
 import 'lottie/examples/main.dart';
 import 'responsive/dashboard_responsive/main.dart';
 import 'responsive/purple_responsive/responsive.dart';
-import 'lottie/main.dart';
 
 void main() {
   runApp(
@@ -41,7 +40,6 @@ class MyHome extends StatelessWidget {
         '/': (context) => MyApp(),
         'p_responsive': (context) => Responsive(),
         'd_responsive': (context) => TableResponsive(),
-        'lottie': (context) => LottieApp(),
         'cool': (context) => CoolApp(),
         'example': (context) => ExamplesApp(),
       },
@@ -108,17 +106,6 @@ class MyApp extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  Button(
-                    width: double.infinity,
-                    title: 'Lottie',
-                    onPressed: () {
-                      Navigator.of(context).pushNamed('lottie');
-                    },
-                    disable: false,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
                   Button(
                     width: double.infinity,
                     title: 'Cool Lottie',
