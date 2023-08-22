@@ -25,7 +25,7 @@ class _SettingsPageState extends State<SettingsPage> {
         onChanged: (Language? language) async {
           if (language != null) {
             Locale _locale = await setLocale(language.languageCode);
-            MyApp.setLocale(context, _locale);
+            MultiLanguageApp.setLocale(context, _locale);
           }
         },
         items: Language.languageList()

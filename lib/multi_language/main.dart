@@ -6,22 +6,22 @@ import 'router/custom_router.dart';
 import 'router/route_constatns.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MultiLanguageApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MultiLanguageApp extends StatefulWidget {
+  const MultiLanguageApp({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<MultiLanguageApp> createState() => _MultiLanguageAppState();
 
   static void setLocale(BuildContext context, Locale newLocale) {
-    _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
+    _MultiLanguageAppState? state = context.findAncestorStateOfType<_MultiLanguageAppState>();
     state?.setLocale(newLocale);
   }
 }
 
-class _MyAppState extends State<MyApp> {
+class _MultiLanguageAppState extends State<MultiLanguageApp> {
   Locale? _locale;
 
   setLocale(Locale locale) {

@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_note/multi_language/main.dart';
 
 import 'components/button.dart';
 import 'lottie/cool/main.dart';
@@ -42,6 +43,7 @@ class MyHome extends StatelessWidget {
         'd_responsive': (context) => TableResponsive(),
         'cool': (context) => CoolApp(),
         'example': (context) => ExamplesApp(),
+        'multi_language': (context) => MultiLanguageApp(),
       },
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
@@ -122,6 +124,28 @@ class MyApp extends StatelessWidget {
                     title: 'タップすると動く',
                     onPressed: () {
                       Navigator.of(context).pushNamed('example');
+                    },
+                    disable: false,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              '多言語対応',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Button(
+                    width: double.infinity,
+                    title: '多言語対応',
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('multi_language');
                     },
                     disable: false,
                   ),
