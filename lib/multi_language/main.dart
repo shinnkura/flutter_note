@@ -16,7 +16,8 @@ class MultiLanguageApp extends StatefulWidget {
   State<MultiLanguageApp> createState() => _MultiLanguageAppState();
 
   static void setLocale(BuildContext context, Locale newLocale) {
-    _MultiLanguageAppState? state = context.findAncestorStateOfType<_MultiLanguageAppState>();
+    _MultiLanguageAppState? state =
+        context.findAncestorStateOfType<_MultiLanguageAppState>();
     state?.setLocale(newLocale);
   }
 }
@@ -42,7 +43,7 @@ class _MultiLanguageAppState extends State<MultiLanguageApp> {
       title: 'Localization',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
